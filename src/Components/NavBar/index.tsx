@@ -7,18 +7,17 @@ import { useState } from "react";
 export function NavBar() {
   const LOGO_NAVBAR = "/logos/logo-navBar.png";
 
-  const [active, setActive] = useState(false);
+  const [isOpen, setOpen] = useState(false);
 
   const data = [
-    { name: "Home", Link: "/" },
-    { name: "Problems", Link: "/problems" },
+    { name: "Início", href: "/" },
     {
-      name: "Team",
-      Link: "/team",
+      name: "Projetos",
+      href: "/projetos",
     },
     {
-      name: "Events",
-      Link: "/events",
+      name: "Sobre",
+      href: "/sobre",
     },
   ];
   return (
@@ -27,45 +26,22 @@ export function NavBar() {
         <div className={styles.logo}>
           <Image src={LOGO_NAVBAR} width={71} height={71} alt="" />
         </div>
+
         <nav className={styles.nav}>
           <ul>
-            <li>
-              <Link href={"/"} className={styles.a}>
-                {" "}
-                Início
-              </Link>
-            </li>
-            <li>
-              <Link href={"/projetos"} className={styles.a}>
-                Projetos
-              </Link>
-            </li>
-            <li>
-              <Link href={"/"} className={styles.a}>
-                {" "}
-                Sobre
-              </Link>
-            </li>
+            {data.map((item, i) => (
+              <li key={i}>
+                <Link href={item.href} className={styles.a}>
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
-        {/* <Hamburger toggled={isOpen} toggle={setOpen}/> */}
-        <div onClick={() => setActive(!active)}>
-          <div className={active ? styles.hamburguer : styles.activeHamburguer}/>
+        <div className={isOpen ? styles.hamburger : styles.activeHamburguer}>
+          <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
-
-        <div className={active ? styles.activeSidenav : styles.sidenav}>
-        <ul className={styles.ul}>
-          {data.map((item, i) => (
-            <li key={i}>
-              <a href="#" className={styles.a}>
-                {item.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
       </div>
     </>
   );
