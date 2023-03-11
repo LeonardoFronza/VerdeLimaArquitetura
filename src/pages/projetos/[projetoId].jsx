@@ -1,4 +1,4 @@
-import styles from "./styles/Project.module.scss";
+import stylesId from "./Project.module.scss";
 import { useRouter } from "next/router";
 import data from "src/data/projects.json";
 import Image from "next/image";
@@ -23,13 +23,13 @@ export default function Todo() {
 
       <Layout>
         <div>
-          <div className={styles.titulo}>
+          <div className={stylesId.titulo}>
             <h1>{projeto.title}</h1>
           </div>
 
-          <div className={styles.containerFotos}>
+          <div className={stylesId.containerFotos}>
             {projeto.photosProject.map((foto, idx) => (
-              <div key={idx} className={styles.fotos}>
+              <div key={idx} className={stylesId.fotos}>
                 <Image src={foto} alt="" width={600} height={480} />
               </div>
             ))}

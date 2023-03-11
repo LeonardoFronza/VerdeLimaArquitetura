@@ -1,4 +1,4 @@
-import styles from "./styles/Project.module.scss";
+import styles from "./Project.module.scss";
 import data from "src/data/projects.json";
 import Image from "next/image";
 import Link from "next/link";
