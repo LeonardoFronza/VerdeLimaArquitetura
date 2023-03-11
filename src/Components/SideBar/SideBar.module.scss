@@ -1,0 +1,48 @@
+.container {
+  background-color: #9aa45f;;
+  position: absolute;
+  float: right;
+  height: 100%;
+  top: 7.4%;
+  width: 50%;
+  animation: showSidebar .4s;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    height: 50%;
+
+    li {
+      text-decoration: none;
+      list-style: none;
+      border-bottom: 1px solid white;
+      padding: 20%;
+    }
+
+    li:hover {
+      background-color: #BA9A37;
+      border-radius: 20px;
+      border-bottom: none;
+      padding: 5%;
+    }
+
+    .link {
+      cursor: pointer;
+      border: none;
+    }
+}
+
+@keyframes showSidebar {
+    from {
+      opacity: 0;
+      width: 0;
+    }
+    to {
+      opacity: 1;
+      width: 50%;
+    }
+  }

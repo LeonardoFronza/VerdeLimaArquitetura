@@ -3,26 +3,19 @@ import Link from "next/link";
 import { Squash as Hamburger } from "hamburger-react";
 import styles from "./NavBar.module.scss";
 import { useState } from "react";
+import { Sidebar } from "../SideBar";
+import data from "src/data/navbar.json";
 
 export function NavBar() {
   const LOGO_NAVBAR = "/logos/logo-navBar.png";
 
   const [isOpen, setOpen] = useState(false);
 
-  const data = [
-    { name: "Início", href: "/" },
-    {
-      name: "Projetos",
-      href: "/projetos",
-    },
-    {
-      name: "Sobre",
-      href: "/sobre",
-    },
-  ];
   return (
     <>
       <div className={styles.container}>
+        
+        
         <div className={styles.logo}>
           <Image src={LOGO_NAVBAR} width={71} height={71} alt="" />
         </div>
@@ -39,9 +32,14 @@ export function NavBar() {
           </ul>
         </nav>
 
-        <div className={isOpen ? styles.hamburger : styles.activeHamburguer}>
+        <div className={styles.hamburger}>
           <Hamburger toggled={isOpen} toggle={setOpen} />
+
+          {isOpen ? <Sidebar isActive={false} /> : <></>}
         </div>
+
+        <div className={styles.flex}/>
+        
       </div>
     </>
   );
