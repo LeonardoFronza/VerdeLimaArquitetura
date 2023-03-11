@@ -12,13 +12,17 @@ import Image from "next/image";
 
 const images = [image1, image2, image3, image4, image5];
 
-export function Slider() {
-  const carousel = useRef();
+interface IProps {
+  carousel : any
+}
+
+export function Slider( {carousel} : IProps) {
+  //const carousel = useRef();
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
-  }, []);
+  }, [carousel]);
 
   return (
     <>

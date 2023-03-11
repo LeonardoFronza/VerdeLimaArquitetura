@@ -2,6 +2,7 @@
 import { Slider } from "@/Components/Slider";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 import styles from "./Home.module.scss";
 
 export function HomeScreen() {
@@ -14,6 +15,7 @@ export function HomeScreen() {
   const Foto4 = "/images/ApeV+R.png";
   const Foto5 = "/images/ApeL+G.png";
 
+  const carousel = useRef();
   return (
     <>
       <div className={styles.containerHome}>
@@ -116,7 +118,7 @@ export function HomeScreen() {
         </div>
 
         <div className={styles.slider}>
-          <Slider />
+          <Slider carousel={carousel}/>
         </div>
 
         <Link href={"/projetos"} className={styles.buttonContainer}>
