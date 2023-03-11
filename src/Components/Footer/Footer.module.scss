@@ -1,0 +1,88 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #9aa45f;
+  padding: 1rem;
+}
+
+.divContato {
+  h1 {
+    font-weight: 400;
+  }
+
+  p {
+    font-weight: 300;
+    padding: 0.2rem;
+  }
+}
+
+.contatoDivEmail {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .itens {
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #ba9a37;
+    font-weight: 600;
+    padding: 1rem;
+  }
+
+  input {
+    margin-top: 5%;
+    height: 40px;
+  }
+
+  textarea {
+    margin-top: 5%;
+    height: 140px;
+  }
+
+  button {
+    border: none;
+    border-radius: 30px;
+    margin: 0 auto;
+    margin-top: 1%;
+    padding: 3%;
+    width: 50%;
+    margin-top: 5%;
+    background-color: #BA9A37;
+    cursor: pointer;
+  }
+}
+
+
+.divMaps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  iframe {
+    margin: 0 auto;
+    border: none;
+    border-radius: 20px;
+  }
+}
+
+.divRedesSocias {
+  display: flex;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  li {
+    list-style: none;
+    font-style: none;
+  }
+
+  .Image {
+    vertical-align: middle;
+    margin-right: 3%;
+  }
+}

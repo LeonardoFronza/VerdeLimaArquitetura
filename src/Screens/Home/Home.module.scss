@@ -1,0 +1,137 @@
+.containerHome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("/images/fundoHomePage.png");
+  background-size: cover;
+  height: 56rem;
+
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .divbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      border: none;
+      border-radius: 30px;
+      padding: 0.8%;
+      width: 7%;
+      background-color: #9aa45f;
+    }
+
+    button:hover {
+        background-color: #697235;
+        transition: 0.5s;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.containerPresentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65rem;
+  background-image: url("/images/ConjuntosDeProjetos.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .box2 {
+    display: flex;
+    padding-top: 20%;
+
+    .texts {
+      margin-left: 5%;
+      h2 {
+        border-bottom: solid 2px #e7e16f;
+        font-size: 95%;
+        width: 120%;
+      }
+
+      p {
+        font-size: 150%;
+      }
+    }
+  }
+}
+
+.project {
+  h1 {
+    font-size: 450%;
+    font-weight: 600;
+    color: #ba9a37;
+    border-bottom: solid 3px #e7e16f;
+    width: 25%;
+    margin-left: 5%;
+    margin-bottom: 3%;
+  }
+  .bolas {
+    display: flex;
+    justify-content: space-around;
+
+    .bola {
+      border-radius: 50%;
+    }
+
+    .bola:hover {
+      box-shadow: 5px 3px 30px #b6983d;
+      transition: 0.5s;
+    }
+  }
+
+  .slider {
+    margin: 3%;
+  }
+
+  .buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+        border: none;
+        border-radius: 30px;
+        padding: 0.8%;
+        background-color: #9aa45f;
+        cursor: pointer;
+      }
+
+    button:hover {
+        background-color: #697235;
+        transition: 0.3s;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+  }
+  
+}
+
+.about {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2%;
+
+  iframe {
+    border: none;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);;
+  }
+}
+
+.box {
+  width: 500px;
+  height: 600px;
+  padding: 2.2%;
+  background-color: #9aa45f;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);;
+  p {
+    margin-top: 5%;
+    text-align: justify;
+    font-weight: 300;
+  }
+}

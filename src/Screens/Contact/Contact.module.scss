@@ -1,0 +1,126 @@
+.container {
+  display: flex;
+  padding: 5%;
+
+  .contato {
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    
+    h1 {
+      color: #ba9a37;
+      text-align: center;
+      padding: 2%;
+      border-bottom: solid 3px #e7e16f;
+      width: 50%;
+    }
+
+    p {
+      color: #6c6c6c;
+      width: 50%;
+      text-align: justify;
+      margin: 3%;
+    }
+
+    div {
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .itens {
+        color: #ba9a37;
+        font-weight: 600;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #9aa45f;
+        border-radius: 10px;
+        margin: 2%;
+        width: 180%;
+        padding: 10%;
+        outline: none;
+        background-color: rgb(255, 255, 255);
+      }
+    
+      input {
+        margin-top: 5%;
+        height: 15%;
+      }
+    
+      textarea {
+        margin-top: 5%;
+        height: 200px;
+      }
+    
+      button {
+        border: none;
+        border-radius: 30px;
+        margin: 0 auto;
+        margin-top: 1%;
+        padding: 3%;
+        width: 50%;
+        margin-top: 5%;
+        background-color: #BA9A37;
+        cursor: pointer;
+      }
+      .styleInput {
+        color: #ba9a37;
+        font-weight: 600;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #9aa45f;
+        border-radius: 10px;
+        margin: 2%;
+        width: 180%;
+        padding: 10%;
+        background-color: rgb(255, 255, 255);
+      }
+    }
+  }
+
+  .redesSocias {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2%;
+    flex: 1;
+    
+    h1 {
+        color: #ba9a37;
+        text-align: center;
+        padding: 2%;
+        border-bottom: solid 3px #e7e16f;
+      }
+
+    .divRedesSocias {
+      display: flex;
+      color: #9aa45f;
+      flex: 1;
+    
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+    
+
+      li {
+        list-style: none;
+        font-style: none;
+        white-space: nowrap;
+       
+      }
+
+      .Image {
+        vertical-align: middle;
+      }
+
+      .link {
+        margin-left: 2%;
+      }
+    }
+  }
+}
