@@ -3,20 +3,36 @@ import { useRouter } from "next/router";
 import data from "src/data/projects.json";
 import Image from "next/image";
 import Layout from "@/Components/Layout";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 
 export default function Todo() {
   const router = useRouter();
 
+  const [larguraTela, setLarguraTela] = useState(0);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setLarguraTela(window.innerWidth);
+      
+      const handleResize = () => {
+        setLarguraTela(window.innerWidth);
+      }
+
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, []);
+
   const id = router.query.projetoId;
   const projeto = data.find((item) => item.id === Number(id));
 
   if (!projeto) {
-    return <h1>Leonardo O Mais gato</h1>;
+    return <h1>Erro</h1>;
   }
-
-  const { innerWidth: width, innerHeight: height } = window;
-
   return (
     <>
       <Head>
@@ -32,7 +48,7 @@ export default function Todo() {
           <div className={stylesId.containerFotos}>
             {projeto.photosProject.map((foto, idx) => (
               <div key={idx} className={stylesId.fotos}>
-                <Image src={foto} alt="" width={width < 800 ? 380 : 600} height={width < 800 ? 380 : 480} />
+                <Image src={foto} alt="" width={larguraTela < 800 ? 380 : 600} height={larguraTela < 800 ? 380 : 480} />
               </div>
             ))}
           </div>

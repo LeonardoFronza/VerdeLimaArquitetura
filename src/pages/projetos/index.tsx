@@ -4,10 +4,27 @@ import Image from "next/image";
 import Link from "next/link";
 import Layout from "@/Components/Layout";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 
 export default function ProjectScreen() {
 
-  const { innerWidth: width, innerHeight: height } = window;
+  const [larguraTela, setLarguraTela] = useState(0);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setLarguraTela(window.innerWidth);
+      
+      const handleResize = () => {
+        setLarguraTela(window.innerWidth);
+      }
+
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, []);
   
   return (
     <>
@@ -27,8 +44,8 @@ export default function ProjectScreen() {
                   className={styles.foto}
                   src={projeto.photo}
                   alt=""
-                  width={width < 800 ? 350 : 400}
-                  height={width < 800 ? 260 :280}
+                  width={larguraTela < 800 ? 350 : 400}
+                  height={larguraTela < 800 ? 260 :280}
                 />
               </Link>
             </div>
