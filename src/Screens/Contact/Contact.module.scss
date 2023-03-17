@@ -124,3 +124,27 @@
     }
   }
 }
+
+
+@media screen and (max-width: 760px) {
+  .container {
+    flex-direction: column;
+
+    .contato  {
+      h1,p {
+        width: 100%;
+      }
+    }
+
+    .redesSocias {
+      margin-top: 4rem;
+      .divRedesSocias{
+        li {
+          margin: 2rem;
+        }
+      }
+    }
+  }
+
+
+ }

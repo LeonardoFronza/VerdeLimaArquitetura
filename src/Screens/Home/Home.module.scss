@@ -25,9 +25,9 @@
     }
 
     button:hover {
-        background-color: #697235;
-        transition: 0.5s;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+      background-color: #697235;
+      transition: 0.5s;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
     }
   }
 }
@@ -76,8 +76,8 @@
 
     .bola {
       border-radius: 50%;
-      width:120px;
-      height:120px;
+      width: 120px;
+      height: 120px;
     }
 
     .bola:hover {
@@ -96,20 +96,19 @@
     justify-content: center;
 
     button {
-        border: none;
-        border-radius: 30px;
-        padding: 0.8%;
-        background-color: #9aa45f;
-        cursor: pointer;
-      }
+      border: none;
+      border-radius: 30px;
+      padding: 0.8%;
+      background-color: #9aa45f;
+      cursor: pointer;
+    }
 
     button:hover {
-        background-color: #697235;
-        transition: 0.3s;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+      background-color: #697235;
+      transition: 0.3s;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
     }
   }
-  
 }
 
 .about {
@@ -117,10 +116,11 @@
   justify-content: space-around;
   align-items: center;
   margin: 2%;
-
+  flex: 1;
   iframe {
+    flex: 1;
     border: none;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -129,7 +129,8 @@
   height: 600px;
   padding: 2.2%;
   background-color: #9aa45f;
-  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+
   p {
     margin-top: 5%;
     text-align: justify;
@@ -138,6 +139,13 @@
 }
 
 @media screen and (max-width: 760px) {
+  .containerHome {
+    .divbutton {
+      button {
+        padding: 2%;
+      }
+    }
+  }
 
   .containerPresentation {
     background: none;
@@ -147,7 +155,7 @@
           font-size: medium;
           width: 90%;
         }
-  
+
         p {
           font-size: larger;
         }
@@ -159,43 +167,11 @@
     h1 {
       font-size: x-large;
       width: 50%;
+    }
 
-    }
-    .bolas {
-      display: flex;
-      justify-content: space-around;
-      
-      .bola {
-        border-radius: 50%;
-      }
-  
-      .bola:hover {
-        box-shadow: 5px 3px 30px #b6983d;
-        transition: 0.5s;
-      }
-    }
-  
-    .slider {
-      margin: 3%;
-    }
-  
     .buttonContainer {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
       button {
-          border: none;
-          border-radius: 30px;
-          padding: 0.8%;
-          background-color: #9aa45f;
-          cursor: pointer;
-        }
-  
-      button:hover {
-          background-color: #697235;
-          transition: 0.3s;
-          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+        padding: 5%;
       }
     }
   }
@@ -209,4 +185,25 @@
     }
   }
 
+  .bolas {
+    display: none;
+    .bola {
+      display: none;
+    }
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+
+    .box {
+      margin-top: 10rem;
+    }
+
+    iframe {
+      margin: 10rem;
+      width: 21rem;
+      height: 20rem;
+    }
+  }
 }

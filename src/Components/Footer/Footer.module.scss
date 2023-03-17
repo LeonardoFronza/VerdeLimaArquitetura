@@ -86,3 +86,21 @@
     margin-right: 3%;
   }
 }
+
+@media screen and (max-width: 760px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .divMaps{
+    margin: 5rem;
+  }
+
+  .divRedesSocias{
+    align-items: center;
+    justify-content: center;
+    li {
+      margin: 4%;   
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import styles from "./Project.module.scss";
+import styles from "./styles//Project.module.scss";
 import data from "src/data/projects.json";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +6,9 @@ import Layout from "@/Components/Layout";
 import Head from "next/head";
 
 export default function ProjectScreen() {
+
+  const { innerWidth: width, innerHeight: height } = window;
+  
   return (
     <>
       <Head>
@@ -24,8 +27,8 @@ export default function ProjectScreen() {
                   className={styles.foto}
                   src={projeto.photo}
                   alt=""
-                  width={400}
-                  height={250}
+                  width={width < 800 ? 350 : 400}
+                  height={width < 800 ? 260 :280}
                 />
               </Link>
             </div>

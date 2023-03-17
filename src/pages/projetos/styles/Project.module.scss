@@ -15,11 +15,25 @@
 .containerFotos {
   display: flex;
   justify-content: space-around;
-  flex-direction: row;
   flex-wrap: wrap;
-  padding: 2%;
-
+  
   .fotos {
+    padding: 2rem;
     margin-bottom: 0.5%;
   }
+}
+
+@media screen and (max-width: 760px) {
+  .titulo{
+    font-size: small;
+    h1 {
+      width: 90%;
+    }
+  }
+
+  .containerFotos {
+  .fotos {
+    padding: 2rem;
+  }
+}
 }

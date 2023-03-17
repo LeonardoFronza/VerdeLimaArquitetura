@@ -10,7 +10,7 @@ export function Form({styles} : Iprops) {
   return (
     <>
       <div className={styles.contatoDivEmail}>
-        <form action="https://formsubmit.co/fronzajf@gmail.com" method="POST">
+        <form action="https://formsubmit.co/Contato@verdelimaarquitetura.com.br" method="POST">
           <input
             className={styles.itens}
             type="text"
@@ -46,7 +46,7 @@ export function Form({styles} : Iprops) {
           <input
             type="hidden"
             name="_next"
-            value={"http://localhost:3000/teste"}
+            value={"http://localhost:3000/obrigado"}
           />
         </form>
       </div>

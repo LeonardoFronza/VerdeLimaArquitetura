@@ -16,7 +16,7 @@ export function Footer() {
             <div className={styles.divContato}>
                 <h1>Contato</h1>
 
-                <p>arq.lilianacardoso@gmail.com</p>
+                <p>Contato@verdelimaarquitetura.com.br</p>
                 <p>(51) 9.9829-1909</p>
 
                 <div className={styles.contatoDivEmail}>
